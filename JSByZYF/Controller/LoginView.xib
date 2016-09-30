@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginView" customModule="JSByZYF" customModuleProvider="target">
+            <connections>
+                <outlet property="account" destination="SLG-IY-eyk" id="HH9-JC-dwP"/>
+                <outlet property="cancel" destination="wJY-lD-oWf" id="jhc-21-ca6"/>
+                <outlet property="pwdLabel" destination="ajY-uv-3By" id="Pa0-zZ-0nE"/>
+                <outlet property="pwdTf" destination="y0G-Ds-wJT" id="UBg-GY-66U"/>
+                <outlet property="registeAccount" destination="Xtg-Ve-3Oe" id="ahY-aa-wVm"/>
+                <outlet property="usrLabel" destination="TpS-la-gOT" id="geM-cv-W1W"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y0G-Ds-wJT">
+                    <rect key="frame" x="20" y="360" width="398" height="30"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="zRO-ci-6ic"/>
+                    </connections>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="邮箱或手机号" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SLG-IY-eyk">
+                    <rect key="frame" x="20" y="308" width="398" height="30"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="7Gr-XM-bwP"/>
+                    </connections>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ajY-uv-3By">
+                    <rect key="frame" x="-14" y="348" width="442" height="55"/>
+                    <color key="tintColor" red="0.31569840599999999" green="0.47450980390000003" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Py-na-kpK">
+                    <rect key="frame" x="31" y="430" width="355" height="57"/>
+                    <color key="backgroundColor" red="0.88235294119999996" green="0.47450980390000003" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" title="登录">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="logInBtn:" destination="-1" eventType="touchUpInside" id="e6p-ML-XOl"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="使用其他方式登录" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xmp-Ib-zD9">
+                    <rect key="frame" x="107" y="507" width="199" height="29"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xtg-Ve-3Oe">
+                    <rect key="frame" x="99" y="686" width="107" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="注册简书账号">
+                        <color key="titleColor" red="0.88235294119999996" green="0.47450980390000003" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="registeAccount:" destination="-1" eventType="touchUpInside" id="Cp6-1P-cUb"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MLT-SV-CLg">
+                    <rect key="frame" x="217" y="689" width="1" height="21"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kLw-Bo-cWw">
+                    <rect key="frame" x="233" y="685" width="66" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="随便看看">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="toMain:" destination="-1" eventType="touchUpInside" id="CeD-t5-AGf"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" tag="201" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ZYF-Login-blog.png" translatesAutoresizingMaskIntoConstraints="NO" id="GmU-o8-VZ3">
+                    <rect key="frame" x="59" y="556" width="45" height="45"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" tag="203" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ZYF-Login-WeChat.png" translatesAutoresizingMaskIntoConstraints="NO" id="KVU-Yx-SId">
+                    <rect key="frame" x="186" y="556" width="45" height="45"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" tag="204" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ZYF-Login-Dou.png" translatesAutoresizingMaskIntoConstraints="NO" id="g3r-n4-4I9">
+                    <rect key="frame" x="246" y="556" width="45" height="45"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" tag="205" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ZYF-Login-Google.png" translatesAutoresizingMaskIntoConstraints="NO" id="t2b-Hj-AH5">
+                    <rect key="frame" x="305" y="556" width="45" height="45"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" tag="202" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ZYF-Login-QQ.png" translatesAutoresizingMaskIntoConstraints="NO" id="2wy-g8-B8c">
+                    <rect key="frame" x="123" y="556" width="45" height="45"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" tag="206" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ZYF-Login-cancle.png" translatesAutoresizingMaskIntoConstraints="NO" id="wJY-lD-oWf">
+                    <rect key="frame" x="366" y="32" width="30" height="30"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="简书" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Svc-gA-vvf">
+                    <rect key="frame" x="134" y="175" width="149" height="61"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="57"/>
+                    <color key="textColor" red="0.88235294117647056" green="0.47450980392156861" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TpS-la-gOT">
+                    <rect key="frame" x="-15" y="295" width="442" height="55"/>
+                    <color key="tintColor" red="0.31569840604026844" green="0.47450980392156861" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+            <point key="canvasLocation" x="127" y="273"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ZYF-Login-Dou.png" width="40" height="40"/>
+        <image name="ZYF-Login-Google.png" width="40" height="40"/>
+        <image name="ZYF-Login-QQ.png" width="40" height="40"/>
+        <image name="ZYF-Login-WeChat.png" width="40" height="40"/>
+        <image name="ZYF-Login-blog.png" width="40" height="40"/>
+        <image name="ZYF-Login-cancle.png" width="30" height="30"/>
+    </resources>
+</document>
